@@ -1,0 +1,41 @@
+# https://academy.subquery.network/quickstart/quickstart_chains/polkadot-humanode.html#goals
+
+type BioauthNewAuthentication @entity {
+  id: ID!
+  blockNumber: Int!
+  validatorPublicKey: String!
+  timestamp: Date!
+}
+
+type ImOnlineSomeOffline @entity {
+  id: ID!
+  blockNumber: Int!
+  accountsIds: [String]!
+  timestamp: Date!
+}
+
+type StarterEntity @entity {
+  id: ID! #id is a required field
+  field1: Int!
+
+  field2: String #filed2 is an optional field
+  field3: BigInt
+
+  field4: Date
+
+  field5: Boolean
+}
+
+type BioAuth @entity {
+  id: ID!
+
+  blockNumber: Int!
+
+  signer: String!
+
+  signature: String!
+
+  ticket: String!
+
+  ticketSignature: String!
+}
